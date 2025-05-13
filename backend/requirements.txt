@@ -32,3 +32,9 @@ django-environ
 pytest
 pytest-django
 coverage
+djangorestframework
+django-cors-headers
+django-filter
+Pillow
+djangorestframework-simplejwt
+
