@@ -1,0 +1,34 @@
+# Framework principal
+Django>=4.2
+djangorestframework
+
+# Autenticación y usuarios
+djangorestframework-simplejwt
+django-cors-headers
+django-allauth  # opcional si quieres autenticación social
+
+# Filtros, imágenes, entorno
+django-filter
+Pillow
+python-decouple  # Para manejar variables de entorno
+
+# Documentación de API
+drf-yasg  # Swagger UI
+
+# Almacenamiento de imágenes (opcional)
+django-storages
+boto3  # para usar con AWS S3
+
+# Pasarelas de pago (elige una)
+dj-stripe  # Para Stripe
+# paypalrestsdk  # Descomenta si usarás PayPal
+
+# Para tareas en segundo plano (opcional)
+celery
+redis
+
+# Seguridad y pruebas
+django-environ
+pytest
+pytest-django
+coverage
