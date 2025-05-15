@@ -1,5 +1,5 @@
 # Framework principal
-Django>=4.2
+
 djangorestframework
 
 # Autenticación y usuarios
@@ -16,21 +16,20 @@ python-decouple  # Para manejar variables de entorno
 drf-yasg  # Swagger UI
 
 # Almacenamiento de imágenes (opcional)
-django-storages
-boto3  # para usar con AWS S3
+# django-storages
+# boto3  # para usar con AWS S3
 
 # Pasarelas de pago (elige una)
-dj-stripe  # Para Stripe
+# dj-stripe  # Para Stripe
 # paypalrestsdk  # Descomenta si usarás PayPal
 
 # Para tareas en segundo plano (opcional)
-celery
-redis
+# celery
+# redis
 
 # Seguridad y pruebas
 django-environ
-pytest
-pytest-django
+
 coverage
 djangorestframework
 django-cors-headers

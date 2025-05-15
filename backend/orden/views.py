@@ -8,13 +8,18 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.permissions import IsAuthenticated
 
 class OrderHistoryViewSet(viewsets.ModelViewSet):
-    # Solo los usuarios autenticados pueden ver su historial de pedidos
     permission_classes = [IsAuthenticated]
     serializer_class = OrderSerializer
-    
+
     def get_queryset(self):
-        # Filtra los pedidos del usuario autenticado
-        return Order.objects.filter(user=self.request.user)
+        queryset = Order.objects.filter(user=self.request.user)
+        
+        # Filtrar por estado si se proporciona el parámetro 'status' en la URL
+        status = self.request.query_params.get('status', None)
+        if status:
+            queryset = queryset.filter(status=status)
+        
+        return queryset
 
 class OrderViewSet(viewsets.ModelViewSet):
     serializer_class = OrderSerializer
